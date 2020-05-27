@@ -24,15 +24,12 @@ public class RNBrightcovePlayerView extends FrameLayout {
     private String accountId;
     private String videoId;
     private ThemedReactContext themedReactContext;
-    private ReactApplicationContext reactApplicationContext;
     private BrightcoveMediaController mediaController;
 
 
-    public RNBrightcovePlayerView(ThemedReactContext themedReactContext, ReactApplicationContext reactApplicationContext) {
+    public RNBrightcovePlayerView(ThemedReactContext themedReactContext) {
         super(themedReactContext);
         this.themedReactContext = themedReactContext;
-        this.reactApplicationContext = reactApplicationContext;
-        this.reactApplicationContext.addLifecycleEventListener(this);
         this.setBackgroundColor(Color.BLACK);
 
         this.playerVideoView = new BrightcoveExoPlayerVideoView(this.themedReactContext);
