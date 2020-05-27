@@ -1,12 +1,13 @@
 package com.rnbrightcoveplayer;
 
 import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
 
-public class RNBrightcovePlayerManager extends ViewGroupManager<RNBrightcovePlayerView> {
+public class RNBrightcovePlayerManager extends SimpleViewManager<RNBrightcovePlayerView> {
 
     public static final String REACT_CLASS = "RNBrightcovePlayer";
 
@@ -19,10 +20,10 @@ public class RNBrightcovePlayerManager extends ViewGroupManager<RNBrightcovePlay
     }
 
     public RNBrightcovePlayerManager(ReactApplicationContext reactApplicationContext) {
-        super();
         this.applicationContext = reactApplicationContext;
     }
 
+    @Override
     public RNBrightcovePlayerView createViewInstance(ThemedReactContext themedReactContext) {
         this.themedReactContext = themedReactContext;
         RNBrightcovePlayerView brightCovePlayerView = RNBrightcovePlayerView.getInstance(themedReactContext);

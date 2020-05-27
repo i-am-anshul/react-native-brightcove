@@ -1,6 +1,8 @@
 package com.rnbrightcoveplayer;
 
+import android.content.Context;
 import android.graphics.Color;
+import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
@@ -12,11 +14,12 @@ import com.brightcove.player.event.EventEmitter;
 import com.brightcove.player.mediacontroller.BrightcoveMediaController;
 import com.brightcove.player.model.Video;
 import com.brightcove.player.view.BrightcoveExoPlayerVideoView;
+import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 
-public class RNBrightcovePlayerView extends FrameLayout {
+public class RNBrightcovePlayerView extends RelativeLayout {
 
     private BrightcoveExoPlayerVideoView playerVideoView;
     private static RNBrightcovePlayerView brightCovePlayer = null;
@@ -40,6 +43,7 @@ public class RNBrightcovePlayerView extends FrameLayout {
         this.playerVideoView.setMediaController(this.mediaController);
         this.requestLayout();
         ViewCompat.setTranslationZ(this, 9999);
+
     }
 
 
@@ -49,7 +53,7 @@ public class RNBrightcovePlayerView extends FrameLayout {
     }
 
     private void playVideo() {
-        if (brightCovePlayer != null && accountId != null && policyKey != null) {
+        if (brightCovePlayer != null && accountId != null && policyKey != null && videoId!= null) {
 
             Catalog catalog = new Catalog(playerVideoView.getEventEmitter(), accountId, policyKey);
 
@@ -63,8 +67,6 @@ public class RNBrightcovePlayerView extends FrameLayout {
             };
 
             catalog.findVideoByID(videoId,listener);
-
-
         }
     }
 

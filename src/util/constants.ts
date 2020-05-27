@@ -5,7 +5,7 @@ export type stringConstantsType = {
 };
 export const stringConstants: stringConstantsType = {
   BCOV_POLICY_KEY:
-    'BCpkADawqM3n0ImwKortQqSZCgJMcyVbb8lJVwt0z16UD0a_h8MpEYcHyKbM8CGOPxBRp0nfSVdfokXBrUu3Sso7Nujv3dnLo0JxC_lNXCl88O7NJ0PR0z2AprnJ_Lwnq7nTcy1GBUrQPr5e',
-  ACCOUNT_ID: '4800266849001',
-  VIDEO_ID: '5754208017001',
+    'BCpkADawqM1W-vUOMe6RSA3pA6Vw-VWUNn5rL0lzQabvrI63-VjS93gVUugDlmBpHIxP16X8TSe5LSKM415UHeMBmxl7pqcwVY_AZ4yKFwIpZPvXE34TpXEYYcmulxJQAOvHbv2dpfq-S_cm',
+  ACCOUNT_ID: '3636334163001',
+  VIDEO_ID: '4866305819001',
 };

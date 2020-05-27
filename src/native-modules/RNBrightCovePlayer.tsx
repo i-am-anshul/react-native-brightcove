@@ -1,3 +1,3 @@
-import {NativeModules} from 'react-native';
+import {requireNativeComponent} from 'react-native';
 
-export const RNBrightcovePlayer = NativeModules.RNBrightcovePlayer;
+export const RNBrightcovePlayer = requireNativeComponent('RNBrightcovePlayer');
