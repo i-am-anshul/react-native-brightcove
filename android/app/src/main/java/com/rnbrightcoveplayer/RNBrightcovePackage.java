@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RNBrightcovePackage implements ReactPackage {
+    
     @NonNull
     @Override
     public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
