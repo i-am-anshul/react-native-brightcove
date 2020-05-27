@@ -1,12 +1,14 @@
 import React from 'react';
 import {View} from 'react-native';
-import {CustomVideoPlayer} from './src/components/video-player/CustomVideoPlayer';
+import {
+  CustomVideoPlayer,
+  styles,
+} from './src/components/video-player/CustomVideoPlayer';
 
-declare const global: {HermesInternal: null | {}};
-
+const {viewStyle} = styles;
 const App = () => {
   return (
-    <View style={{flex: 1}}>
+    <View style={viewStyle}>
       <CustomVideoPlayer />
     </View>
   );
